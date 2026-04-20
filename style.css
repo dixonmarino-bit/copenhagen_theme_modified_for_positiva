@@ -2098,6 +2098,21 @@ ul {
   margin-top: 20px;
 }
 
+.positiva-related-cards .positiva-articles-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+.positiva-related-cards .positiva-article-card {
+  flex: 0 0 320px;
+  min-height: 220px;
+  scroll-snap-align: start;
+}
+
 /***** Attachments *****/
 /* Styles attachments inside posts, articles and comments */
 .attachments .attachment-item {
