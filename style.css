@@ -2093,9 +2093,19 @@ ul {
 .positiva-related-cards {
   border-top: 1px solid #e4e4e4;
   margin-top: 26px;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
 }
 .positiva-related-cards h2 {
-  margin-top: 20px;
+  margin: 0 0 14px;
+}
+
+.positiva-related-cards > * {
+  width: 100%;
+  min-width: 0;
+  margin-right: 0;
+  padding-right: 0;
 }
 
 .positiva-related-cards .positiva-articles-grid {
@@ -2111,6 +2121,12 @@ ul {
   flex: 0 0 320px;
   min-height: 220px;
   scroll-snap-align: start;
+}
+
+.positiva-related-cards .see-all-articles {
+  display: block;
+  margin-top: 14px;
+  text-align: right;
 }
 
 /***** Attachments *****/
