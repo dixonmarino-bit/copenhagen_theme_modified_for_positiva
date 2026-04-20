@@ -1,25 +1,31 @@
-<footer class="footer">
-  <div class="footer-inner">
-    {{#link 'help_center'}}{{help_center.name}}{{/link}}
+<footer class="footer positiva-footer">
+  <div class="footer-inner positiva-footer-inner">
+    <div class="positiva-footer-brand">
+      <img src="{{settings.logo}}" alt="Logo ARL Positiva" class="positiva-footer-logo" />
+    </div>
 
-    <div class="footer-language-selector">
-      {{#if alternative_locales}}
-        <div class="dropdown language-selector">
-          <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            {{current_locale.name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </button>
-          <span class="dropdown-menu dropdown-menu-end" role="menu">
-            {{#each alternative_locales}}
-              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-                {{name}}
-              </a>
-            {{/each}}
-          </span>
-        </div>
-      {{/if}}
+    <div class="positiva-footer-column">
+      <h3>Ponerse en contacto</h3>
+      <p>Autopista norte (carrera 45) 94 - 72, Bogotá, Colombia</p>
+      <p>En esta dirección solo opera la administración central. Para recibir información dirígete a nuestros puntos de atención.</p>
+      <p>servicioalcliente@positiva.gov.co</p>
+      <p>Línea de atención en Bogotá: 6013307000</p>
+      <p>Líneas gratuitas de atención nacional: 018000111170</p>
+    </div>
+
+    <div class="positiva-footer-column">
+      <h3>Servicios</h3>
+      <p>{{#link 'help_center'}}Centro de ayuda{{/link}}</p>
+      <p>Puntos de atención</p>
+      <p>Canales</p>
+    </div>
+
+    <div class="positiva-footer-column">
+      <h3>Redes sociales</h3>
+      <p>Instagram · Facebook · X · YouTube · TikTok</p>
+      <p><a href="https://www.positiva.gov.co" target="_blank" rel="noreferrer">www.positiva.gov.co</a></p>
     </div>
   </div>
+
+  <div class="positiva-footer-copy">Copyright © 2024. Todos los derechos reservados</div>
 </footer>
