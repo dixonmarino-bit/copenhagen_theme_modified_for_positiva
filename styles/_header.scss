@@ -218,44 +218,52 @@ $header-height: 71px;
 }
 
 .skip-navigation {
-  align-items: center;
-  background-color: black;
-  color: white;
-  display: flex;
-  font-size: 14px;
-  justify-content: center;
-  left: -999px;
-  margin: 20px;
-  padding: 20px;
-  overflow: hidden;
+  left: 50%;
   position: absolute;
-  top: auto;
-  z-index: -999;
+  top: -1000px;
+  transition: top .1s ease-in-out;
+  transform: translateX(-50%);
+  z-index: 1000;
 
-
-  [dir="rtl"] & {
-    left: initial;
-    right: -999px;
-  }
-
-  &:focus,
-  &:active {
-    left: auto;
-    overflow: auto;
-    text-align: center;
+  &:focus {
+    background-color: $background_color;
+    border: 1px solid $brand_color;
+    border-radius: 4px;
+    color: $brand_color;
+    padding: 16px;
     text-decoration: none;
-    top: auto;
-    z-index: 999;
-
-
-  [dir="rtl"] & {
-    left: initial;
-    right: auto;
-  }
+    top: $header-height;
   }
 }
 
-// Disable the skip-navigation link when modals are open
-#zd-modal-container ~ .skip-navigation {
-  display: none;
+/* Positiva overrides */
+.positiva-header {
+  border-bottom: 1px solid #e6e6e6;
+  height: 80px;
+}
+
+.positiva-logo {
+  display: flex;
+  align-items: center;
+
+  span {
+    color: #ea7600;
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+
+.positiva-top-nav {
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+}
+
+.top-nav-link {
+  color: #222 !important;
+  text-decoration: none;
+}
+
+.top-nav-link-muted {
+  color: #686868;
 }
