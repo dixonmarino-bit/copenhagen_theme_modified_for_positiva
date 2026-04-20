@@ -6,38 +6,35 @@
     <h2>¿Tienes dudas o necesitas asesoría?</h2>
     <p class="positiva-hero-highlight">¡Estamos para ayudarte!</p>
     <p class="positiva-hero-description">
-      Explora todos los artículos de la base de conocimiento en formato de tarjetas.
-      Desliza por la página y selecciona el contenido que necesitas.
+      Explora las secciones de la base de conocimiento en formato de tarjetas.
+      Ingresa a cada sección para ver todos los artículos.
     </p>
   </div>
 </section>
 
 <div class="container positiva-home">
-  <section class="positiva-kb-grid" aria-label="Artículos de la base de conocimiento">
+  <section class="positiva-kb-grid" aria-label="Secciones de la base de conocimiento">
     {{#each categories}}
+      {{#if ../has_multiple_categories}}
+        <h3 class="positiva-grid-title">{{name}}</h3>
+      {{/if}}
+
       {{#if sections}}
-        {{#each sections}}
-          {{#if articles}}
-            <h3 class="positiva-grid-title">{{name}}</h3>
-            <div class="positiva-articles-grid">
-              {{#each articles}}
-                <a href="{{url}}" class="positiva-article-card {{#if promoted}}is-promoted{{/if}}">
-                  <div class="positiva-article-card-content">
-                    <p class="positiva-card-section">{{../name}}</p>
-                    <h4>{{title}}</h4>
-                    <p class="positiva-card-excerpt">
-                      {{excerpt body characters=160}}
-                    </p>
-                  </div>
-                  <div class="positiva-card-hover">
-                    <p>{{excerpt body characters=220}}</p>
-                    <span>Leer artículo</span>
-                  </div>
-                </a>
-              {{/each}}
-            </div>
-          {{/if}}
-        {{/each}}
+        <div class="positiva-articles-grid">
+          {{#each sections}}
+            <a href="{{url}}" class="positiva-article-card">
+              <div class="positiva-article-card-content">
+                <p class="positiva-card-section">Sección</p>
+                <h4>{{name}}</h4>
+                <p class="positiva-card-excerpt">{{excerpt description characters=160}}</p>
+              </div>
+              <div class="positiva-card-hover">
+                <p>{{excerpt description characters=220}}</p>
+                <span>Ver artículos</span>
+              </div>
+            </a>
+          {{/each}}
+        </div>
       {{/if}}
     {{/each}}
   </section>
